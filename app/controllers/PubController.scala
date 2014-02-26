@@ -29,7 +29,7 @@ class PubController(implicit val bindingModule: BindingModule)
   
   def beers(id: String) = Action.async {
     
-    //pubService.beers(id)
+//    pubService.beers(id)
     
     Future.successful(NotImplemented)
   }

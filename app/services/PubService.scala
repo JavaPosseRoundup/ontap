@@ -1,6 +1,6 @@
 package services
 
-import models.{Pub, PubSeq}
+import models.{Beer, Pub, PubSeq}
 import scala.concurrent.Future
 import play.api.{Logger, Play}
 import play.api.libs.json.Json
@@ -10,6 +10,8 @@ import com.github.davidmoten.geo.GeoHash
 trait PubService {
   
   def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq]
+
+  def beers(pubId: String): Future[Seq[Beer]]
 
 }
 
@@ -32,12 +34,10 @@ class FakePubService extends PubService {
     
     val pubs = maybeBeerId match {
       case Some(beerId) =>
-        // todo
-        /*
-        localPubs.filter { pub =>
-          pub.beers.contain(beerId)
-        }
-        */
+//        localPubs.filter { pub =>
+//
+//          pub.beers.contains(beerId)
+//        }
         localPubs
       case None =>
         localPubs
@@ -45,4 +45,6 @@ class FakePubService extends PubService {
     
     Future.successful(PubSeq(pubs))
   }
+
+  override def beers(pubId: String): Future[Seq[Beer]] = Future.successful(Seq.empty)
 }
