@@ -9,7 +9,7 @@ import com.github.davidmoten.geo.GeoHash
 
 trait PubService {
   
-  def near(lat: Float, lng: Float, scale: Int): Future[PubSeq]
+  def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq]
 
 }
 
@@ -22,14 +22,27 @@ class FakePubService extends PubService {
     })
   } getOrElse PubSeq(Seq())
   
-  override def near(lat: Float, lng: Float, scale: Int): Future[PubSeq] = {
+  override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] = {
     val geoHash = GeoHash.encodeHash(lat, lng, scale)
     
-    val matchedPubs = PubSeq(allFakePubs.pubs.filter { pub =>
+    val localPubs = allFakePubs.pubs.filter { pub =>
       val subGeoHash = pub.geoHash.substring(0, scale)
       subGeoHash == geoHash
-    })
+    }
     
-    Future.successful(matchedPubs)
+    val pubs = maybeBeerId match {
+      case Some(beerId) =>
+        // todo
+        /*
+        localPubs.filter { pub =>
+          pub.beers.contain(beerId)
+        }
+        */
+        localPubs
+      case None =>
+        localPubs
+    }
+    
+    Future.successful(PubSeq(pubs))
   }
 }

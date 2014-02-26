@@ -19,14 +19,17 @@ class PubController(implicit val bindingModule: BindingModule)
   implicit val askTimeout = Timeout(15.seconds)
   
   def near(lat: Float, lng: Float, beerId: Option[String], scale: Int) = Action.async {
-    val pubSeqFuture = pubService.near(lat, lng, scale)
+    val pubSeqFuture = pubService.near(lat, lng, beerId, scale)
     
     pubSeqFuture.map { pubSeq =>
+      
       Ok(Json.toJson(pubSeq))
     }
   }
   
   def beers(id: String) = Action.async {
+    
+    //pubService.beers(id)
     
     Future.successful(NotImplemented)
   }
