@@ -4,13 +4,31 @@ import play.api.libs.json.{Json, Format}
 import models.xmlutil.XmlFormat
 import scala.xml.Node
 
-case class SearchResult(id: String, name: String, status: String, street: String, city: String, state: String, zip: String, country: String)
+case class Geolocation(geoHash: String,
+                       lat: Float,
+                       long: Float)
 
-object SearchResult {
-  implicit val jsonFormat: Format[SearchResult] = Json.format[SearchResult]
+object Geolocation {
+  implicit def geolocationFormat: Format[Geolocation] = Json.format[Geolocation]
+}
 
-  implicit val xmlFormat = new XmlFormat[SearchResult] {
-    override def writeXml(item: SearchResult): Node = {
+case class Pub(id: String,
+               name: String,
+               status: String,
+               street: String,
+               city: String,
+               state: String,
+               zip: String,
+               country: String,
+               geoLocation: Option[Geolocation] = None) {
+
+}
+
+object Pub {
+  implicit val jsonFormat: Format[Pub] = Json.format[Pub]
+
+  implicit val xmlFormat = new XmlFormat[Pub] {
+    override def writeXml(item: Pub): Node = {
       <location>
         <id>{item.id}</id>
         <name>{item.name}</name>
@@ -29,7 +47,7 @@ object SearchResult {
       </location>
     }
 
-    override def readXml(node: Node): SearchResult = {
+    override def readXml(node: Node): Pub = {
       val id = (node \ "id").text
       val name = (node \ "name").text
       val status = (node \ "status").text
@@ -38,7 +56,13 @@ object SearchResult {
       val state = (node \ "state").text
       val zip = (node \ "zip").text
       val country = (node \ "country").text
-      SearchResult(id, name, status, street, city, state, zip, country)
+      Pub(id, name, status, street, city, state, zip, country)
     }
   }
+}
+
+case class PubSeq(pubs: Seq[Pub])
+
+object PubSeq {
+  implicit val pubSeqFormat: Format[PubSeq] = Json.format[PubSeq]
 }

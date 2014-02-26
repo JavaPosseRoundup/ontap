@@ -66,21 +66,21 @@ class SearchResultXmlTest extends FunSpec with Matchers {
     it ("should read a single search results node into the case class") {
       import XmlFormat._
 
-      val theLoc = fromXml[SearchResult](singleLocation)
+      val theLoc = fromXml[Pub](singleLocation)
       theLoc should be (
-        SearchResult("2406", "Two Bells", "Beer Bar", "2313 4th Ave",
+        Pub("2406", "Two Bells", "Beer Bar", "2313 4th Ave",
                      "Seattle", "WA", "98121", "United States")
       )
     }
 
     it ("should read a sequence of search results into seq of case classes") {
       import XmlFormat._
-      val locs = fromXmlSeq[SearchResult](allLocations \\ "location")
+      val locs = fromXmlSeq[Pub](allLocations \\ "location")
       locs should be (
         Seq(
-          SearchResult("2406", "Two Bells", "Beer Bar", "2313 4th Ave",
+          Pub("2406", "Two Bells", "Beer Bar", "2313 4th Ave",
             "Seattle", "WA", "98121", "United States"),
-          SearchResult("9262", "Ring O'Bells Brewery", "Brewery", "Pennygillam Way",
+          Pub("9262", "Ring O'Bells Brewery", "Brewery", "Pennygillam Way",
             "Launceston", "Cornwall", "PL15 7ED", "United Kingdom")
         )
       )
