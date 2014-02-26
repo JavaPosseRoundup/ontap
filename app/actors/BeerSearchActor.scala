@@ -2,14 +2,14 @@ package actors
 
 import akka.actor.Actor
 import play.api.libs.json.{Json, Format}
-import models.{SearchResult}
+import models._
 
 class BeerSearchActor extends Actor {
 
   def receive = {
     case doSearch: DoSearch =>
       context.system.log.info(doSearch.toString)
-      sender ! Seq(SearchResult("2406", "Two Bells", "Beer Bar", "2313 4th Ave", "Seattle", "WA", "98121", "United States"))
+      sender ! PubSeq(Seq(Pub("2406", "Two Bells", "Beer Bar", "2313 4th Ave", "Seattle", "WA", "98121", "United States")))
     case _ =>
       context.system.log.info("do what now?")
   }

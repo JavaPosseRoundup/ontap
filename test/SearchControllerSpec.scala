@@ -1,27 +1,29 @@
-import models.SearchResult
-import org.specs2.mutable._
-import org.specs2.runner._
+import models._
+import org.scalatest._
+import org.scalatest.matchers._
 import org.junit.runner._
 
 import play.api.test._
 import play.api.test.Helpers._
 
-@RunWith(classOf[JUnitRunner])
-class SearchControllerSpec extends Specification {
+class SearchControllerSpec extends FunSpec with Matchers {
 
-  "Application" should {
+  describe ("Application") {
+    it ("should do a search with a query and location are specified") {
+      running(new FakeApplication()) {
+        val result = controllers.Application.doSearch("foo", "asdf")(FakeRequest())
 
-    "do a search with a query and location are specified" in new WithApplication {
-      val result = controllers.Application.doSearch("foo", "asdf")(FakeRequest())
-      
-      status(result) must equalTo(OK)
-      contentType(result) must beSome("application/json")
-      
-      val maybeSearchResults = contentAsJson(result).asOpt[Seq[SearchResult]]
-      
-      maybeSearchResults must beSome[Seq[SearchResult]]
-      
-      // todo: add tests on the JSON data
+        status(result) should be (OK)
+        contentType(result) should be (Some("application/json"))
+
+        val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
+
+        maybeSearchResults should be (
+          Some(
+            PubSeq(Seq(Pub("2406", "Two Bells", "Beer Bar", "2313 4th Ave", "Seattle", "WA", "98121", "United States")))
+          )
+        )
+      }
     }
     
     // todo: test alternate / failure conditions
