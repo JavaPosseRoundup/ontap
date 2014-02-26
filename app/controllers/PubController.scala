@@ -18,10 +18,10 @@ class PubController(implicit val bindingModule: BindingModule)
   
   implicit val askTimeout = Timeout(15.seconds)
   
-  def listNear(lat: Float, lng: Float) = Action.async {
+  def listNear(lat: Float, lng: Float, scale: Int) = Action.async {
     //val geo = Geolocation("", lat, lon)
     
-    val pubSeqFuture = pubService.near(lat, lng)
+    val pubSeqFuture = pubService.near(lat, lng, scale)
     
     pubSeqFuture.map { pubSeq =>
       Ok(Json.toJson(pubSeq))

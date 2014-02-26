@@ -1,29 +1,7 @@
 package models
 
 import play.api.libs.json._
-import play.api.libs.functional.syntax._
-
-/*
-case class Geolocation(geoHash: String,
-                       lat: Float,
-                       lon: Float)
-
-
-object Geolocation {
-  def latLonToGeo(lat: Float, lon: Float) = {
-    Geolocation("", lat, lon)
-  }
-  
-  def geoToLatLon(geo: Geolocation) = {
-    (geo.lat, geo.lon)
-  }
-  
-  implicit def geolocationFormat: Format[Geolocation] = (
-    (__ \ "lat").format[Float] ~
-    (__ \ "lng").format[Float]
-  )(latLonToGeo, geoToLatLon)
-}
-*/
+import com.github.davidmoten.geo.GeoHash
 
 case class Pub(id: String,
                name: String,
@@ -34,11 +12,12 @@ case class Pub(id: String,
                country: String,
                lat: Float,
                lng: Float) {
-
+  lazy val geoHash: String = GeoHash.encodeHash(lat, lng, Pub.DEFAULT_PUB_SIZE)
 }
 
 object Pub {
   implicit val jsonFormat: Format[Pub] = Json.format[Pub]
+  val DEFAULT_PUB_SIZE = 7
 }
 
 case class PubSeq(pubs: Seq[Pub])
