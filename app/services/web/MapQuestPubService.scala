@@ -13,8 +13,9 @@ import play.api.libs.concurrent.Execution.Implicits._
  * Created by dick on 2/26/14.
  */
 class MapQuestPubService extends PubService {
-  override def near(lat: Float, lng: Float, scale: Int): Future[PubSeq] =
+  override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] =
     MapQuestPubService.pubsForLoc(lat, lng, scale, MapQuestPubService.NUMBER_OF_MATCHES)
+
 }
 
 
