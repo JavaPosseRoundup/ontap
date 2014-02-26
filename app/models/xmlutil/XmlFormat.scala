@@ -11,3 +11,8 @@ trait XmlFormat[T] {
   def readXml(node: Node): T
   def writeXml(item: T): Node
 }
+
+object XmlFormat {
+  def toXml[T: XmlFormat](item: T): Node = implicitly[XmlFormat[T]].writeXml(item)
+  def fromXml[T: XmlFormat](xml: Node): T = implicitly[XmlFormat[T]].readXml(xml)
+}
