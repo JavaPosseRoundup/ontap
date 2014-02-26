@@ -31,8 +31,8 @@ class PubControllerSpec extends FunSpec with Matchers {
 
         val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
         
-        maybeSearchResults.map(_.pubs.head) should contain (
-          Pub("34499325", "Sushi Bar & Grill", "321 Elk Ave", "Crested Butte", "CO", "81224", "US", 38.86972F, -106.98495F)
+        maybeSearchResults.map(_.pubs.head) should be (
+          Some(Pub("34499325", "Sushi Bar & Grill", "321 Elk Ave", "Crested Butte", "CO", "81224", "US", 38.86972F, -106.98495F))
         )
       }
     }
