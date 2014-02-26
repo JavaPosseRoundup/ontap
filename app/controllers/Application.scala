@@ -3,7 +3,7 @@ package controllers
 import play.api._
 import play.api.mvc._
 import play.api.libs.concurrent.Akka
-import actors.{SearchResults, DoSearch, BeerSearchActor}
+import actors.{DoSearch, BeerSearchActor}
 import akka.pattern.ask
 import akka.actor.{ActorRef, Props}
 import play.api.Play.current
@@ -12,6 +12,7 @@ import play.api.libs.json.Json
 import akka.util.Timeout
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
+import models.SearchResult
 
 object Application extends Controller {
 
@@ -27,7 +28,7 @@ object Application extends Controller {
     val searchResults: Future[Any] = beerSearchActorRef ? DoSearch(query, location)
     
     val resultFuture: Future[SimpleResult] = searchResults.map {
-      case searchResults: SearchResults =>
+      case searchResults: Seq[SearchResult] =>
         Ok(Json.toJson(searchResults))
       case _ =>
         InternalServerError("Unknown Error")
