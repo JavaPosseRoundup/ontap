@@ -18,32 +18,20 @@ class PubController(implicit val bindingModule: BindingModule)
   
   implicit val askTimeout = Timeout(15.seconds)
   
-  def listNear(lat: Float, lng: Float, scale: Int) = Action.async {
-    //val geo = Geolocation("", lat, lon)
-    
+  def near(lat: Float, lng: Float, beerId: Option[String], scale: Int) = Action.async {
     val pubSeqFuture = pubService.near(lat, lng, scale)
     
     pubSeqFuture.map { pubSeq =>
       Ok(Json.toJson(pubSeq))
     }
+  }
+  
+  def beers(id: String) = Action.async {
     
-    /*
-    val beerSearchActorRef: ActorRef = Akka.system.actorOf(Props[BeerSearchActor])
-
-    val searchResults: Future[Any] = beerSearchActorRef ? DoSearch(query, location)
-    
-    val resultFuture: Future[SimpleResult] = searchResults.map {
-      case searchResults: PubSeq =>
-        Ok(Json.toJson(searchResults))
-      case _ =>
-        InternalServerError("Unknown Error")
-    } recover {
-      case e: Exception =>
-        InternalServerError(e.toString)
-    }
-    
-    resultFuture
-    */
+    Future.successful(NotImplemented)
   }
 
+  def beerAtPub(pubId: String, beerId: String) = play.mvc.Results.TODO
+
+  def beerNotAtPub(pubId: String, beerId: String) = play.mvc.Results.TODO
 }
