@@ -24,7 +24,7 @@ class PubControllerSpec extends FunSpec with Matchers {
         
         val pubController = new PubController
         
-        val result = pubController.listNear(0.0F, 0.0F)(FakeRequest())
+        val result = pubController.listNear(0.0F, 0.0F, 5)(FakeRequest())
 
         status(result) should be (OK)
         contentType(result) should be (Some("application/json"))
