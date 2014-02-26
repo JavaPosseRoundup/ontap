@@ -27,7 +27,7 @@ class PubControllerSpec extends FunSpec with Matchers {
             
           val (lat, lng) = (38.867183F, -106.976208F)
             
-          val result = pubController.listNear(lat, lng, 7)(FakeRequest())
+          val result = pubController.near(lat, lng, None, 7)(FakeRequest())
     
           status(result) should be (OK)
           contentType(result) should be (Some("application/json"))
@@ -44,7 +44,7 @@ class PubControllerSpec extends FunSpec with Matchers {
           
           val (lat, lng) = (38.86972F, -106.98698F)
           
-          val result = pubController.listNear(lat, lng, Pub.DEFAULT_BOTTLE_SIZE)(FakeRequest())
+          val result = pubController.near(lat, lng, None, Pub.DEFAULT_BOTTLE_SIZE)(FakeRequest())
   
           status(result) should be (OK)
           contentType(result) should be (Some("application/json"))
@@ -66,7 +66,7 @@ class PubControllerSpec extends FunSpec with Matchers {
 
           val (lat, lng) = (38.86972F, -106.98698F)
 
-          val result = pubController.listNear(lat, lng, Pub.DEFAULT_TOWN_SIZE)(FakeRequest())
+          val result = pubController.near(lat, lng, None, Pub.DEFAULT_TOWN_SIZE)(FakeRequest())
 
           status(result) should be (OK)
           contentType(result) should be (Some("application/json"))
