@@ -1,0 +1,843 @@
+{"searchResults": [
+    {
+        "resultNumber": 1,
+        "distance": 0.09,
+        "sourceName": "mqap.ntpois",
+        "name": "Sushi Bar & Grill",
+        "shapePoints": [38.86972, -106.98495],
+        "distanceUnit": "m",
+        "key": "41ca9553-6f47-41dc-885f-89ade759fecf",
+        "fields": {
+            "phone": "9703495457",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98495,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34499325",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98495,
+                    "lat": 38.86972
+                }
+            },
+            "address": "321 Elk Ave",
+            "name": "Sushi Bar & Grill",
+            "mqap_id": "41ca9553-6f47-41dc-885f-89ade759fecf",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86972,
+            "disp_lng": -106.98477
+        }
+    },
+    {
+        "resultNumber": 2,
+        "distance": 0.09,
+        "sourceName": "mqap.ntpois",
+        "name": "Ginger Cafe",
+        "shapePoints": [38.86972, -106.98289],
+        "distanceUnit": "m",
+        "key": "ba3ed39f-1397-4732-8cb0-dd09ffe0a042",
+        "fields": {
+            "phone": "9703497291",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98289,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504325",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98289,
+                    "lat": 38.86972
+                }
+            },
+            "address": "425 Elk Ave",
+            "name": "Ginger Cafe",
+            "mqap_id": "ba3ed39f-1397-4732-8cb0-dd09ffe0a042",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86972,
+            "disp_lng": -106.98293
+        }
+    },
+    {
+        "resultNumber": 3,
+        "distance": 0.1,
+        "sourceName": "mqap.ntpois",
+        "name": "Teocalli Tamale",
+        "shapePoints": [38.86973, -106.9853],
+        "distanceUnit": "m",
+        "key": "7de00ec8-75e5-4b43-9aed-f7ccf3d8aa0f",
+        "fields": {
+            "phone": "9703492005",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.9853,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504603",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.9853,
+                    "lat": 38.86973
+                }
+            },
+            "address": "311 Elk Ave",
+            "name": "Teocalli Tamale",
+            "mqap_id": "7de00ec8-75e5-4b43-9aed-f7ccf3d8aa0f",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86973,
+            "disp_lng": -106.98525
+        }
+    },
+    {
+        "resultNumber": 4,
+        "distance": 0.1,
+        "sourceName": "mqap.ntpois",
+        "name": "Donita's Cantina",
+        "shapePoints": [38.869728, -106.985332],
+        "distanceUnit": "m",
+        "key": "64d6fbc9-4f71-47b4-a8e3-04f0df9e168c",
+        "fields": {
+            "phone": "9703496674",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.985332,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "17175851",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.985332,
+                    "lat": 38.869728
+                }
+            },
+            "address": "330 Elk Ave",
+            "name": "Donita's Cantina",
+            "mqap_id": "64d6fbc9-4f71-47b4-a8e3-04f0df9e168c",
+            "postal_code": "81224",
+            "disp_lat": 38.869728,
+            "lat": 38.869728,
+            "disp_lng": -106.985466
+        }
+    },
+    {
+        "resultNumber": 5,
+        "distance": 0.11,
+        "sourceName": "mqap.ntpois",
+        "name": "Marchitelli's Gourmet Noodle",
+        "shapePoints": [38.86916, -106.98584],
+        "distanceUnit": "m",
+        "key": "6acf3edf-4234-492a-8fa3-e1ccdba579c4",
+        "fields": {
+            "phone": "9703497401",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98584,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "17176149",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98584,
+                    "lat": 38.86916
+                }
+            },
+            "address": "411 3rd St",
+            "name": "Marchitelli's Gourmet Noodle",
+            "mqap_id": "6acf3edf-4234-492a-8fa3-e1ccdba579c4",
+            "postal_code": "81224",
+            "disp_lat": 38.86921,
+            "lat": 38.86916,
+            "disp_lng": -106.98615
+        }
+    },
+    {
+        "resultNumber": 6,
+        "distance": 0.11,
+        "sourceName": "mqap.ntpois",
+        "name": "Paradise Cafe",
+        "shapePoints": [38.86973, -106.98556],
+        "distanceUnit": "m",
+        "key": "2bacb46c-0adc-49b7-9b94-c1effbc5e240",
+        "fields": {
+            "phone": "9703496233",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98556,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504412",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98556,
+                    "lat": 38.86973
+                }
+            },
+            "address": "303 Elk Ave",
+            "name": "Paradise Cafe",
+            "mqap_id": "2bacb46c-0adc-49b7-9b94-c1effbc5e240",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86973,
+            "disp_lng": -106.98556
+        }
+    },
+    {
+        "resultNumber": 7,
+        "distance": 0.13,
+        "sourceName": "mqap.ntpois",
+        "name": "Idlespur",
+        "shapePoints": [38.869727, -106.982006],
+        "distanceUnit": "m",
+        "key": "53d9de17-82a2-4df5-bf83-a0029e253eae",
+        "fields": {
+            "phone": "9703495026",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.982006,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504394",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.982006,
+                    "lat": 38.869727
+                }
+            },
+            "address": "527 Elk Ave",
+            "name": "Idlespur",
+            "mqap_id": "53d9de17-82a2-4df5-bf83-a0029e253eae",
+            "postal_code": "81224",
+            "disp_lat": 38.869728,
+            "lat": 38.869727,
+            "disp_lng": -106.98214
+        }
+    },
+    {
+        "resultNumber": 8,
+        "distance": 0.15,
+        "sourceName": "mqap.ntpois",
+        "name": "Maxwell's Steakhouse",
+        "shapePoints": [38.86973, -106.98632],
+        "distanceUnit": "m",
+        "key": "c3138cde-5b02-4895-8d1f-6f62b28cf18f",
+        "fields": {
+            "phone": "9703491221",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98632,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "1001247577",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98632,
+                    "lat": 38.86973
+                }
+            },
+            "address": "226 Elk Ave",
+            "name": "Maxwell's Steakhouse",
+            "mqap_id": "c3138cde-5b02-4895-8d1f-6f62b28cf18f",
+            "postal_code": "81224",
+            "disp_lat": 38.8695,
+            "lat": 38.86973,
+            "disp_lng": -106.98632
+        }
+    },
+    {
+        "resultNumber": 9,
+        "distance": 0.16,
+        "sourceName": "mqap.ntpois",
+        "name": "Eastside Bistro",
+        "shapePoints": [38.86908, -106.98104],
+        "distanceUnit": "m",
+        "key": "4bd2666c-5186-45a1-aff2-a312e992889d",
+        "fields": {
+            "phone": "9703499699",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98104,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "19283120",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98104,
+                    "lat": 38.86908
+                }
+            },
+            "address": "435 6th St",
+            "name": "Eastside Bistro",
+            "mqap_id": "4bd2666c-5186-45a1-aff2-a312e992889d",
+            "postal_code": "81224",
+            "disp_lat": 38.86902,
+            "lat": 38.86908,
+            "disp_lng": -106.98136
+        }
+    },
+    {
+        "resultNumber": 10,
+        "distance": 0.17,
+        "sourceName": "mqap.ntpois",
+        "name": "Sunshine Deli",
+        "shapePoints": [38.86972, -106.98681],
+        "distanceUnit": "m",
+        "key": "defa31db-749b-43b3-ae79-aceee0a11339",
+        "fields": {
+            "phone": "9703496866",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98681,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "801868034",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98681,
+                    "lat": 38.86972
+                }
+            },
+            "address": "214 Elk Ave",
+            "name": "Sunshine Deli",
+            "mqap_id": "defa31db-749b-43b3-ae79-aceee0a11339",
+            "postal_code": "81224",
+            "disp_lat": 38.8695,
+            "lat": 38.86972,
+            "disp_lng": -106.98681
+        }
+    },
+    {
+        "resultNumber": 11,
+        "distance": 0.17,
+        "sourceName": "mqap.ntpois",
+        "name": "Pitas in Paradise",
+        "shapePoints": [38.86972, -106.98689],
+        "distanceUnit": "m",
+        "key": "96cd22b0-ef74-48bf-8e37-f2b2a462f05e",
+        "fields": {
+            "phone": "9703490897",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98689,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34480504",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98689,
+                    "lat": 38.86972
+                }
+            },
+            "address": "212 Elk Ave",
+            "name": "Pitas in Paradise",
+            "mqap_id": "96cd22b0-ef74-48bf-8e37-f2b2a462f05e",
+            "postal_code": "81224",
+            "disp_lat": 38.8695,
+            "lat": 38.86972,
+            "disp_lng": -106.98689
+        }
+    },
+    {
+        "resultNumber": 12,
+        "distance": 0.18,
+        "sourceName": "mqap.ntpois",
+        "name": "Bacchanale",
+        "shapePoints": [38.86972, -106.98698],
+        "distanceUnit": "m",
+        "key": "4613b788-7492-4ea2-9eaf-ca9d2e249d40",
+        "fields": {
+            "phone": "9703495257",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98698,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "17175157",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98698,
+                    "lat": 38.86972
+                }
+            },
+            "address": "209 Elk Ave",
+            "name": "Bacchanale",
+            "mqap_id": "4613b788-7492-4ea2-9eaf-ca9d2e249d40",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86972,
+            "disp_lng": -106.98698
+        }
+    },
+    {
+        "resultNumber": 13,
+        "distance": 0.18,
+        "sourceName": "mqap.ntpois",
+        "name": "Brick Oven Pizzeria",
+        "shapePoints": [38.869723, -106.987009],
+        "distanceUnit": "m",
+        "key": "0d0b5e78-6e55-4ca0-bf66-b95d54cbb806",
+        "fields": {
+            "phone": "9703495044",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.987009,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "17233797",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.987009,
+                    "lat": 38.869723
+                }
+            },
+            "address": "229 Elk Ave",
+            "name": "Brick Oven Pizzeria",
+            "mqap_id": "0d0b5e78-6e55-4ca0-bf66-b95d54cbb806",
+            "postal_code": "81224",
+            "disp_lat": 38.869724,
+            "lat": 38.869723,
+            "disp_lng": -106.987144
+        }
+    },
+    {
+        "resultNumber": 14,
+        "distance": 0.18,
+        "sourceName": "mqap.ntpois",
+        "name": "Last Steep Bar & Grill",
+        "shapePoints": [38.86972, -106.98707],
+        "distanceUnit": "m",
+        "key": "cd961201-9495-403f-9f83-60c30e62f0fd",
+        "fields": {
+            "phone": "9703497007",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98707,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34498906",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98707,
+                    "lat": 38.86972
+                }
+            },
+            "address": "208 Elk Ave",
+            "name": "Last Steep Bar & Grill",
+            "mqap_id": "cd961201-9495-403f-9f83-60c30e62f0fd",
+            "postal_code": "81224",
+            "disp_lat": 38.8695,
+            "lat": 38.86972,
+            "disp_lng": -106.98703
+        }
+    },
+    {
+        "resultNumber": 15,
+        "distance": 0.19,
+        "sourceName": "mqap.ntpois",
+        "name": "Timberline Restaurant",
+        "shapePoints": [38.86972, -106.98724],
+        "distanceUnit": "m",
+        "key": "9600ed4b-afb8-4919-8600-28b523c00276",
+        "fields": {
+            "phone": "9703499831",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98724,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34499173",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98724,
+                    "lat": 38.86972
+                }
+            },
+            "address": "201 Elk Ave",
+            "name": "Timberline Restaurant",
+            "mqap_id": "9600ed4b-afb8-4919-8600-28b523c00276",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86972,
+            "disp_lng": -106.98729
+        }
+    },
+    {
+        "resultNumber": 16,
+        "distance": 0.19,
+        "sourceName": "mqap.ntpois",
+        "name": "Slogar",
+        "shapePoints": [38.86821, -106.98749],
+        "distanceUnit": "m",
+        "key": "4f98bfa9-b439-47f3-9a1c-426c3d1d96f2",
+        "fields": {
+            "phone": "9703495765",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98749,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34498105",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98749,
+                    "lat": 38.86821
+                }
+            },
+            "address": "517 2nd St",
+            "name": "Slogar",
+            "mqap_id": "4f98bfa9-b439-47f3-9a1c-426c3d1d96f2",
+            "postal_code": "81224",
+            "disp_lat": 38.86821,
+            "lat": 38.86821,
+            "disp_lng": -106.98772
+        }
+    },
+    {
+        "resultNumber": 17,
+        "distance": 0.2,
+        "sourceName": "mqap.ntpois",
+        "name": "Le Bosquet-Why Cook",
+        "shapePoints": [38.866123, -106.98217],
+        "distanceUnit": "m",
+        "key": "26d6d24d-6e89-488d-a93a-8937df562d83",
+        "fields": {
+            "phone": "9703495858",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98217,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504128",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98217,
+                    "lat": 38.866123
+                }
+            },
+            "address": "525 Red Lady St",
+            "name": "Le Bosquet-Why Cook",
+            "mqap_id": "26d6d24d-6e89-488d-a93a-8937df562d83",
+            "postal_code": "81224",
+            "disp_lat": 38.866127,
+            "lat": 38.866123,
+            "disp_lng": -106.982033
+        }
+    },
+    {
+        "resultNumber": 18,
+        "distance": 0.2,
+        "sourceName": "mqap.ntpois",
+        "name": "Le Bosque",
+        "shapePoints": [38.866123, -106.98217],
+        "distanceUnit": "m",
+        "key": "a7b38f8e-c841-4025-a0f6-899c1b57943d",
+        "fields": {
+            "phone": "9703495808",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98217,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34490260",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98217,
+                    "lat": 38.866123
+                }
+            },
+            "address": "525 Red Lady St",
+            "name": "Le Bosque",
+            "mqap_id": "a7b38f8e-c841-4025-a0f6-899c1b57943d",
+            "postal_code": "81224",
+            "disp_lat": 38.866127,
+            "lat": 38.866123,
+            "disp_lng": -106.982033
+        }
+    },
+    {
+        "resultNumber": 19,
+        "distance": 0.22,
+        "sourceName": "mqap.ntpois",
+        "name": "Soupcon Restaurant & Bistro",
+        "shapePoints": [38.86972, -106.9879],
+        "distanceUnit": "m",
+        "key": "94f99396-c993-428d-8c79-d94d9e4bad6b",
+        "fields": {
+            "phone": "9703495448",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.9879,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "1024701863",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.9879,
+                    "lat": 38.86972
+                }
+            },
+            "address": "127 Elk Ave",
+            "name": "Soupcon Restaurant & Bistro",
+            "mqap_id": "94f99396-c993-428d-8c79-d94d9e4bad6b",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86972,
+            "disp_lng": -106.98785
+        }
+    },
+    {
+        "resultNumber": 20,
+        "distance": 0.31,
+        "sourceName": "mqap.ntpois",
+        "name": "Secret Stash",
+        "shapePoints": [38.86977, -106.98949],
+        "distanceUnit": "m",
+        "key": "b5f768ce-a3e2-47ca-866f-22c7b42fd46f",
+        "fields": {
+            "phone": "9703496245",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98949,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34496948",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98949,
+                    "lat": 38.86977
+                }
+            },
+            "address": "21 Elk Ave",
+            "name": "Secret Stash",
+            "mqap_id": "b5f768ce-a3e2-47ca-866f-22c7b42fd46f",
+            "postal_code": "81224",
+            "disp_lat": 38.87002,
+            "lat": 38.86977,
+            "disp_lng": -106.98945
+        }
+    },
+    {
+        "resultNumber": 21,
+        "distance": 0.37,
+        "sourceName": "mqap.ntpois",
+        "name": "Gas Cafe",
+        "shapePoints": [38.87333, -106.98055],
+        "distanceUnit": "m",
+        "key": "2499a3da-879b-468a-af00-92267950c6d1",
+        "fields": {
+            "phone": "9703499656",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.98055,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34504826",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.98055,
+                    "lat": 38.87333
+                }
+            },
+            "address": "602 Butte Ave",
+            "name": "Gas Cafe",
+            "mqap_id": "2499a3da-879b-468a-af00-92267950c6d1",
+            "postal_code": "81224",
+            "disp_lat": 38.87311,
+            "lat": 38.87333,
+            "disp_lng": -106.98051
+        }
+    },
+    {
+        "resultNumber": 22,
+        "distance": 2.02,
+        "sourceName": "mqap.ntpois",
+        "name": "Remi's at the Country Club",
+        "shapePoints": [38.86345, -106.947099],
+        "distanceUnit": "m",
+        "key": "7aa0bd91-8209-4e60-b4d5-470d9ea853ba",
+        "fields": {
+            "phone": "9703495018",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.947099,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34496000",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.947099,
+                    "lat": 38.86345
+                }
+            },
+            "address": "385 Country Club Dr",
+            "name": "Remi's at the Country Club",
+            "mqap_id": "7aa0bd91-8209-4e60-b4d5-470d9ea853ba",
+            "postal_code": "81224",
+            "disp_lat": 38.863377,
+            "lat": 38.86345,
+            "disp_lng": -106.947212
+        }
+    },
+    {
+        "resultNumber": 23,
+        "distance": 2.24,
+        "sourceName": "mqap.ntpois",
+        "name": "Bubba's Restaurant at Paradise",
+        "shapePoints": [38.89806, -106.96634],
+        "distanceUnit": "m",
+        "key": "c683e4ce-6b6f-409e-9bdc-df2c6ad00d12",
+        "fields": {
+            "phone": "9703492274",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.96634,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "34503072",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.96634,
+                    "lat": 38.89806
+                }
+            },
+            "address": "12 Snowmass Rd",
+            "name": "Bubba's Restaurant at Paradise",
+            "mqap_id": "c683e4ce-6b6f-409e-9bdc-df2c6ad00d12",
+            "postal_code": "81224",
+            "disp_lat": 38.89831,
+            "lat": 38.89806,
+            "disp_lng": -106.96613
+        }
+    },
+    {
+        "resultNumber": 24,
+        "distance": 2.36,
+        "sourceName": "mqap.ntpois",
+        "name": "Trackers Bar and Lounge",
+        "shapePoints": [38.900583, -106.967858],
+        "distanceUnit": "m",
+        "key": "bbe81b8f-5e9a-4241-9167-dcc3fae38732",
+        "fields": {
+            "phone": "9703494228",
+            "side_of_street": "N",
+            "group_sic_code": "581208",
+            "state": "CO",
+            "lng": -106.967858,
+            "group_sic_code_name": "(all) Restaurants",
+            "country": "US",
+            "city": "Crested Butte",
+            "id": "1040152083",
+            "mqap_geography": {
+                "latLng": {
+                    "lng": -106.967858,
+                    "lat": 38.900583
+                }
+            },
+            "address": "620 Gothic Rd",
+            "name": "Trackers Bar and Lounge",
+            "mqap_id": "bbe81b8f-5e9a-4241-9167-dcc3fae38732",
+            "postal_code": "81224",
+            "disp_lat": 38.900459,
+            "lat": 38.900583,
+            "disp_lng": -106.967918
+        }
+    }
+], "origin": {
+    "latLng": {
+        "lng": -106.983943,
+        "lat": 38.868703
+    },
+    "adminArea4": "",
+    "adminArea5Type": "City",
+    "adminArea4Type": "County",
+    "adminArea5": "",
+    "street": "",
+    "adminArea1": "",
+    "adminArea3": "",
+    "type": "s",
+    "displayLatLng": {
+        "lng": -106.983943,
+        "lat": 38.868703
+    },
+    "linkId": 0,
+    "postalCode": "",
+    "sideOfStreet": "N",
+    "dragPoint": false,
+    "adminArea1Type": "Country",
+    "geocodeQuality": "LATLNG",
+    "geocodeQualityCode": "XXXXX",
+    "adminArea3Type": "State"
+}, "resultsCount": 24, "hostedData": [
+    {
+        "tableName": "mqap.ntpois",
+        "extraCriteria": "group_sic_code=?",
+        "parameters": ["581208"],
+        "columnNames": []
+    }
+], "totalPages": 1, "info": {
+    "statusCode": 0,
+    "copyright": {
+        "text": "© 2014 MapQuest, Inc.",
+        "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+        "imageAltText": "© 2014 MapQuest, Inc."
+    },
+    "messages": []
+}, "options": {
+    "kmlStyleUrl": "http://www.mapquestapi.com/kml-default.kml",
+    "shapeFormat": "raw",
+    "ambiguities": true,
+    "pageSize": 24,
+    "radius": 20,
+    "currentPage": 1,
+    "units": "m",
+    "maxMatches": 50
+}}

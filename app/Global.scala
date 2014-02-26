@@ -15,4 +15,5 @@ class Global extends GlobalSettings {
         injectedConstructor.newInstance(StandardBindings)
     }
   }
+  
 }

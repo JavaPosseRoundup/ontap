@@ -1,64 +1,44 @@
 package models
 
-import play.api.libs.json.{Json, Format}
-import models.xmlutil.XmlFormat
-import scala.xml.Node
+import play.api.libs.json._
+import play.api.libs.functional.syntax._
 
+/*
 case class Geolocation(geoHash: String,
                        lat: Float,
-                       long: Float)
+                       lon: Float)
+
 
 object Geolocation {
-  implicit def geolocationFormat: Format[Geolocation] = Json.format[Geolocation]
+  def latLonToGeo(lat: Float, lon: Float) = {
+    Geolocation("", lat, lon)
+  }
+  
+  def geoToLatLon(geo: Geolocation) = {
+    (geo.lat, geo.lon)
+  }
+  
+  implicit def geolocationFormat: Format[Geolocation] = (
+    (__ \ "lat").format[Float] ~
+    (__ \ "lng").format[Float]
+  )(latLonToGeo, geoToLatLon)
 }
+*/
 
 case class Pub(id: String,
                name: String,
-               status: String,
-               street: String,
+               address: String,
                city: String,
                state: String,
-               zip: String,
+               postal_code: String,
                country: String,
-               geoLocation: Option[Geolocation] = None) {
+               lat: Float,
+               lng: Float) {
 
 }
 
 object Pub {
   implicit val jsonFormat: Format[Pub] = Json.format[Pub]
-
-  implicit val xmlFormat = new XmlFormat[Pub] {
-    override def writeXml(item: Pub): Node = {
-      <location>
-        <id>{item.id}</id>
-        <name>{item.name}</name>
-        <status>{item.status}</status>
-        <reviewlink></reviewlink>
-        <proxylink></proxylink>
-        <blogmap></blogmap>
-        <street>{item.street}</street>
-        <city>{item.city}</city>
-        <state>{item.state}</state>
-        <zip>{item.zip}</zip>
-        <country>{item.country}</country>
-        <phone></phone>
-        <overall></overall>
-        <imagecount></imagecount>
-      </location>
-    }
-
-    override def readXml(node: Node): Pub = {
-      val id = (node \ "id").text
-      val name = (node \ "name").text
-      val status = (node \ "status").text
-      val street = (node \ "street").text
-      val city = (node \ "city").text
-      val state = (node \ "state").text
-      val zip = (node \ "zip").text
-      val country = (node \ "country").text
-      Pub(id, name, status, street, city, state, zip, country)
-    }
-  }
 }
 
 case class PubSeq(pubs: Seq[Pub])
