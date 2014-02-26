@@ -3,7 +3,6 @@ package controllers
 import play.api._
 import play.api.mvc._
 import play.api.libs.concurrent.Akka
-import actors.{DoSearch, BeerSearchActor}
 import akka.pattern.ask
 import akka.actor.{ActorRef, Props}
 import play.api.Play.current
