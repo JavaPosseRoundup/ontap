@@ -19,7 +19,7 @@ class PubControllerSpec extends FunSpec with Matchers {
   }
   
   describe ("PubController") {
-    describe ("listNear") {
+    describe ("near") {
       it ("should not return any pubs near James's house") {
         running(new FakeApplication()) {
            
@@ -78,6 +78,29 @@ class PubControllerSpec extends FunSpec with Matchers {
           )
 
           maybeSearchResults.get.pubs.length should be > 1
+        }
+      }
+      it ("should return a list of pubs in Crested Butte that have Pliny") {
+        running(new FakeApplication()) {
+
+          val pubController = new PubController
+
+          val (lat, lng) = (38.86972F, -106.98698F)
+          
+          val plinyId = "1"
+
+          val result = pubController.near(lat, lng, Some(plinyId), Pub.DEFAULT_TOWN_SIZE)(FakeRequest())
+
+          status(result) should be (OK)
+          contentType(result) should be (Some("application/json"))
+
+          val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
+
+          maybeSearchResults.get.pubs should contain (
+            Pub("17233797", "Brick Oven Pizzeria", "229 Elk Ave", "Crested Butte", "CO", "81224", "US", 38.869723F, -106.987009F)
+          )
+
+          maybeSearchResults.get.pubs.length should be >= 1
         }
       }
     }
