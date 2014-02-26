@@ -44,18 +44,19 @@ class PubControllerSpec extends FunSpec with Matchers {
           
           val (lat, lng) = (38.86972F, -106.98698F)
           
-          val result = pubController.listNear(lat, lng, 7)(FakeRequest())
+          val result = pubController.listNear(lat, lng, Pub.DEFAULT_BOTTLE_SIZE)(FakeRequest())
   
           status(result) should be (OK)
           contentType(result) should be (Some("application/json"))
   
           val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
-  
-          maybeSearchResults.get.pubs should contain (
+
+          maybeSearchResults.get.pubs.length should be (1)
+          
+          maybeSearchResults.get.pubs.head should be (
             Pub("17175157", "Bacchanale", "209 Elk Ave", "Crested Butte", "CO", "81224", "US", lat, lng)
           )
 
-          //maybeSearchResults.map(_.pubs.length) should be  (1)
         }
       }
       it ("should return a list of pubs in Crested Butte") {
@@ -65,7 +66,7 @@ class PubControllerSpec extends FunSpec with Matchers {
 
           val (lat, lng) = (38.86972F, -106.98698F)
 
-          val result = pubController.listNear(lat, lng, 5)(FakeRequest())
+          val result = pubController.listNear(lat, lng, Pub.DEFAULT_TOWN_SIZE)(FakeRequest())
 
           status(result) should be (OK)
           contentType(result) should be (Some("application/json"))
