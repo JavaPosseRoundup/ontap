@@ -19,21 +19,66 @@ class PubControllerSpec extends FunSpec with Matchers {
   }
   
   describe ("PubController") {
-    it ("should list pubs near a lat lon") {
-      running(new FakeApplication()) {
-        
-        val pubController = new PubController
-        
-        val result = pubController.listNear(0.0F, 0.0F, 5)(FakeRequest())
+    describe ("listNear") {
+      it ("should not return any pubs near James's house") {
+        running(new FakeApplication()) {
+           
+          val pubController = new PubController
+            
+          val (lat, lng) = (38.867183F, -106.976208F)
+            
+          val result = pubController.listNear(lat, lng, 7)(FakeRequest())
+    
+          status(result) should be (OK)
+          contentType(result) should be (Some("application/json"))
+  
+          val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
+          
+          maybeSearchResults.get.pubs should be (empty)
+        }
+      }
+      it ("should return a pub at a known pub") {
+        running(new FakeApplication()) {
+  
+          val pubController = new PubController
+          
+          val (lat, lng) = (38.86972F, -106.98698F)
+          
+          val result = pubController.listNear(lat, lng, Pub.DEFAULT_BOTTLE_SIZE)(FakeRequest())
+  
+          status(result) should be (OK)
+          contentType(result) should be (Some("application/json"))
+  
+          val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
 
-        status(result) should be (OK)
-        contentType(result) should be (Some("application/json"))
+          maybeSearchResults.get.pubs.length should be (1)
+          
+          maybeSearchResults.get.pubs.head should be (
+            Pub("17175157", "Bacchanale", "209 Elk Ave", "Crested Butte", "CO", "81224", "US", lat, lng)
+          )
 
-        val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
-        
-        maybeSearchResults.map(_.pubs.head) should be (
-          Some(Pub("34499325", "Sushi Bar & Grill", "321 Elk Ave", "Crested Butte", "CO", "81224", "US", 38.86972F, -106.98495F))
-        )
+        }
+      }
+      it ("should return a list of pubs in Crested Butte") {
+        running(new FakeApplication()) {
+
+          val pubController = new PubController
+
+          val (lat, lng) = (38.86972F, -106.98698F)
+
+          val result = pubController.listNear(lat, lng, Pub.DEFAULT_TOWN_SIZE)(FakeRequest())
+
+          status(result) should be (OK)
+          contentType(result) should be (Some("application/json"))
+
+          val maybeSearchResults = contentAsJson(result).asOpt[PubSeq]
+
+          maybeSearchResults.get.pubs should contain (
+            Pub("17175157", "Bacchanale", "209 Elk Ave", "Crested Butte", "CO", "81224", "US", lat, lng)
+          )
+
+          maybeSearchResults.get.pubs.length should be > 1
+        }
       }
     }
     
