@@ -1,19 +1,21 @@
 package services
 
-import models.{Pub, PubSeq}
+import models.{PubId, Beer, Pub, PubSeq}
 import scala.concurrent.Future
-import play.api.{Logger, Play}
+import play.api.Play
 import play.api.libs.json.Json
 import play.api.Play.current
 import com.github.davidmoten.geo.GeoHash
 
-trait PubService {
-  
+trait PubLocatorService {
   def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq]
-
 }
 
-class FakePubService extends PubService {
+trait BeerListingService {
+  def beers(pubId: PubId): Future[Seq[Beer]]
+}
+
+class FakePubService extends PubLocatorService with BeerListingService {
   
   def allFakePubs = Play.resourceAsStream("ontap_mapquest_response.json").map { stream =>
     val fileString = scala.io.Source.fromInputStream(stream).getLines().mkString("\n")
@@ -22,7 +24,8 @@ class FakePubService extends PubService {
     })
   } getOrElse PubSeq(Seq())
   
-  override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] = {
+  override def near(lat: Float, lng: Float, maybeBeerId: Option[String],
+                    scale: Int): Future[PubSeq] = {
     val geoHash = GeoHash.encodeHash(lat, lng, scale)
     
     val localPubs = allFakePubs.pubs.filter { pub =>
@@ -32,12 +35,10 @@ class FakePubService extends PubService {
     
     val pubs = maybeBeerId match {
       case Some(beerId) =>
-        // todo
-        /*
-        localPubs.filter { pub =>
-          pub.beers.contain(beerId)
-        }
-        */
+//        localPubs.filter { pub =>
+//
+//          pub.beers.contains(beerId)
+//        }
         localPubs
       case None =>
         localPubs
@@ -45,4 +46,8 @@ class FakePubService extends PubService {
     
     Future.successful(PubSeq(pubs))
   }
+
+  private val beerService = new FakeBeerService
+
+  override def beers(pubId: PubId): Future[Seq[Beer]] = beerService.beersForPub(pubId)
 }
