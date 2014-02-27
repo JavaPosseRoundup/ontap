@@ -28,3 +28,15 @@ case class PubSeq(pubs: Seq[Pub])
 object PubSeq {
   implicit val pubSeqFormat: Format[PubSeq] = Json.format[PubSeq]
 }
+
+sealed trait PubId {
+  val id: String
+}
+
+object DiveBar extends PubId {
+  override val id: String = "Dive Bar"
+}
+
+object BrickOvenPizza extends PubId {
+  override val id: String = "Brick Oven Pizza"
+}

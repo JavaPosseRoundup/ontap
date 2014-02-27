@@ -1,6 +1,6 @@
 package services
 
-import models.{Beer, Pub, PubSeq}
+import models.{PubId, Beer, Pub, PubSeq}
 import scala.concurrent.Future
 import play.api.Play
 import play.api.libs.json.Json
@@ -12,7 +12,7 @@ trait PubLocatorService {
 }
 
 trait BeerListingService {
-  def beers(pubId: String): Future[Seq[Beer]]
+  def beers(pubId: PubId): Future[Seq[Beer]]
 }
 
 class FakePubService extends PubLocatorService with BeerListingService {
@@ -47,5 +47,7 @@ class FakePubService extends PubLocatorService with BeerListingService {
     Future.successful(PubSeq(pubs))
   }
 
-  override def beers(pubId: String): Future[Seq[Beer]] = Future.successful(Seq.empty)
+  private val beerService = new FakeBeerService
+
+  override def beers(pubId: PubId): Future[Seq[Beer]] = beerService.beersForPub(pubId)
 }
