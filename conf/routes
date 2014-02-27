@@ -8,6 +8,8 @@ GET        /pubs                       @controllers.PubController.near(lat: Floa
 
 GET        /pub/:id/beers              @controllers.PubController.beers(id: String)
 
+GET        /pubs-test                  @controllers.PubController.nearTest(lat: Float, lng: Float, beerId: Option[String] ?= None, scale: Int ?= 5)
+
 PUT        /pub/:pubId/beer/:beerId    @controllers.PubController.beerAtPub(pubId: String, beerId: String)
 DELETE     /pub/:pubId/beer/:beerId    @controllers.PubController.beerNotAtPub(pubId: String, beerId: String)
 

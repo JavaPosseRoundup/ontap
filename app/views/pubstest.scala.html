@@ -1,0 +1,13 @@
+@(pubs: PubSeq)
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>The Pubs Are:</h1>
+<ul>
+@for(pub <- pubs.pubs) { <li>@{pub.name}</li> }
+</ul>
+</body>
+</html>
