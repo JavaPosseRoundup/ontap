@@ -1,13 +1,11 @@
 package controllers
 
 import play.api.mvc._
-import play.api.Play.current
 import scala.concurrent.Future
 import play.api.libs.json.Json
 import akka.util.Timeout
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
-import models._
 import com.escalatesoft.subcut.inject.{Injectable, BindingModule}
 import services.PubLocatorService
 import services.web.MapQuestPubLocatorService
@@ -29,9 +27,6 @@ class PubController(implicit val bindingModule: BindingModule)
   }
   
   def beers(id: String) = Action.async {
-    
-//    pubService.beers(id)
-    
     Future.successful(NotImplemented)
   }
 

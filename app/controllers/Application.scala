@@ -1,17 +1,6 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
-import play.api.libs.concurrent.Akka
-import akka.pattern.ask
-import akka.actor.{ActorRef, Props}
-import play.api.Play.current
-import scala.concurrent.Future
-import play.api.libs.json.Json
-import akka.util.Timeout
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration._
-import models._
 import com.escalatesoft.subcut.inject.{Injectable, BindingModule}
 
 class Application(implicit val bindingModule: BindingModule) 

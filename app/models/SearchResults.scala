@@ -29,7 +29,13 @@ object PubSeq {
   implicit val pubSeqFormat: Format[PubSeq] = Json.format[PubSeq]
 }
 
+/**
+ * Unique Pub Id
+ */
 sealed trait PubId {
+  /**
+   * String value of the Pub Id
+   */
   val id: String
 }
 
@@ -40,3 +46,8 @@ object DiveBar extends PubId {
 object BrickOvenPizza extends PubId {
   override val id: String = "Brick Oven Pizza"
 }
+
+/**
+ * Pub Id that has been retrieved from a backend service or data store.
+ */
+case class RetrievedPubId(id: String) extends PubId
