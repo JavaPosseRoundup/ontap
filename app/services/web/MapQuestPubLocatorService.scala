@@ -12,14 +12,10 @@ import play.api.libs.concurrent.Execution.Implicits._
 /**
  * Created by dick on 2/26/14.
  */
-class MapQuestPubLocatorService extends PubLocatorService {
+object MapQuestPubLocatorService extends PubLocatorService {
   override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] =
     MapQuestPubLocatorService.pubsForLoc(lat, lng, scale, MapQuestPubLocatorService.NUMBER_OF_MATCHES)
 
-}
-
-
-object MapQuestPubLocatorService {
   val NUMBER_OF_MATCHES = 100
 
   val sizes = Vector(0F, 2500F, 630F, 78F, 20F, 2.4F, 0.61F, 0.076F, 0.019F, 0.001F, 0.0001F, 0.00001F, 0.000001F)

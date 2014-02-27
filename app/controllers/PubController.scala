@@ -26,6 +26,15 @@ class PubController(implicit val bindingModule: BindingModule)
       Ok(Json.toJson(pubSeq))
     }
   }
+
+  def nearTest(lat: Float, lng: Float, beerId: Option[String], scale: Int) = Action.async {
+    val pubSeqFuture = pubService.near(lat, lng, beerId, scale)
+
+    pubSeqFuture.map { pubSeq =>
+
+      Ok(views.html.pubstest(pubSeq))
+    }
+  }
   
   def beers(id: String) = Action.async {
     
