@@ -3,17 +3,16 @@
 # ~~~~
 
 # Home page
-GET        /                           @controllers.Application.index
-GET        /pubs                       @controllers.PubController.near(lat: Float, lng: Float, beerId: Option[String] ?= None, scale: Int ?= 5)
+GET           /                               @controllers.Application.index
+GET           /pubs                           @controllers.PubController.near(lat: Float, lng: Float, beerId: Option[String] ?= None, scale: Int ?= 5)
 
-GET        /pub/:id/beers              @controllers.PubController.beers(id: String)
+GET           /pub/:id/beers                  @controllers.PubController.beers(id: String)
 
-GET        /pubs-test                  @controllers.PubController.nearTest(lat: Float, lng: Float, beerId: Option[String] ?= None, scale: Int ?= 5)
+PUT           /pub/:pubId/beer/:beerId        @controllers.PubController.beerAtPub(pubId: String, beerId: String)
+DELETE        /pub/:pubId/beer/:beerId        @controllers.PubController.beerNotAtPub(pubId: String, beerId: String)
 
-PUT        /pub/:pubId/beer/:beerId    @controllers.PubController.beerAtPub(pubId: String, beerId: String)
-DELETE     /pub/:pubId/beer/:beerId    @controllers.PubController.beerNotAtPub(pubId: String, beerId: String)
-
-GET        /beers                      @controllers.BeerController.search(prefix: String)
+GET           /beers                          @controllers.BeerController.search(prefix: String)
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file               controllers.Assets.at(path="/public", file)
+GET           /assets/*file                   controllers.Assets.at(path="/public", file)
+GET           /webjars/*file                  controllers.WebJarAssets.at(file)
