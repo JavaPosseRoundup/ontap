@@ -2,6 +2,20 @@
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    <form id="latlngform" method="get">
+        <input id="lat" value="38.867183" placeholder="Latitude">
+        <input id="lng" value="-106.976208" placeholder="Longitude">
+        <select id="scale">
+            <option value="3">Within 78km</option>
+            <option value="4">Within 20km</option>
+            <option value="5" SELECTED>Within 2.4km</option>
+            <option value="6">Within 610m</option>
+            <option value="7">Within 70m</option>
+            <option value="8">Within 20m</option>
+        </select>
+        <input type="submit" name="Search For Pubs">
+    </form>
+    
+    <ul id="pubs"></ul>
 
 }
