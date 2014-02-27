@@ -4,7 +4,6 @@ $ ->
     lat = $("#lat").val()
     lng = $("#lng").val()
     scale = $("#scale").val()
-    console.log(scale)
     url = "/pubs?lat=" + lat + "&lng=" + lng + "&scale=" + scale
     $.get url, (data) ->
       pubs = $("#pubs")
