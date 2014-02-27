@@ -15,9 +15,7 @@ import services.web.MapQuestPubService
 class PubController(implicit val bindingModule: BindingModule) 
   extends Controller with Injectable {
 
-  lazy val mapQuestPubService = new MapQuestPubService
-
-  val pubService = injectOptional [PubService] getOrElse mapQuestPubService
+  val pubService = injectOptional [PubService] getOrElse MapQuestPubService
   
   implicit val askTimeout = Timeout(15.seconds)
   
