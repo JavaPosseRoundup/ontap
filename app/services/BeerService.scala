@@ -21,5 +21,6 @@ class FakeBeerService extends BeerService {
           Ale
         )
         Future.successful(Seq(pliny))
+      case _ => ???
     }
 }

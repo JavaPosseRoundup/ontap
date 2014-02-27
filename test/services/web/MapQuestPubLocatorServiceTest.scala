@@ -1,7 +1,7 @@
 package services.web
 
 import org.scalatest.{Matchers, FunSpec}
-import java.net.{URLEncoder, URI, URL}
+import java.net.URL
 
 /**
  * Created by dick on 2/26/14.

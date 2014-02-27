@@ -4,10 +4,7 @@ import services.PubLocatorService
 import scala.concurrent.Future
 import models.{Pub, PubSeq}
 import play.api.libs.ws._
-import play.api.libs.json._
 import play.api.libs.concurrent.Execution.Implicits._
-
-
 
 /**
  * Created by dick on 2/26/14.
