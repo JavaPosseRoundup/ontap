@@ -10,11 +10,12 @@ import scala.concurrent.duration._
 import models._
 import com.escalatesoft.subcut.inject.{Injectable, BindingModule}
 import services.PubLocatorService
+import services.web.MapQuestPubLocatorService
 
 class PubController(implicit val bindingModule: BindingModule) 
   extends Controller with Injectable {
 
-  val pubService = inject[PubLocatorService]
+  val pubService = injectOptional [PubLocatorService] getOrElse MapQuestPubLocatorService
   
   implicit val askTimeout = Timeout(15.seconds)
   
