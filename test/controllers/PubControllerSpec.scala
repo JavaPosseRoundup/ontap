@@ -6,9 +6,9 @@ import models._
 import org.scalatest.{Matchers, FunSpec}
 import play.api.test._
 import play.api.test.Helpers._
-import services.{FakePubService, PubService}
+import services.{FakePubService, PubLocatorService}
 import com.escalatesoft.subcut.inject.{NewBindingModule, BindingModule}
-import services.web.MapQuestPubService
+import services.web.MapQuestPubLocatorService
 
 class PubControllerSpec extends FunSpec with Matchers {
 
@@ -16,7 +16,7 @@ class PubControllerSpec extends FunSpec with Matchers {
     import module._
     
     module <~ StandardBindings
-    bind [PubService] toSingle new FakePubService
+    bind [PubLocatorService] toSingle new FakePubService
   }
   
   describe ("PubController") {

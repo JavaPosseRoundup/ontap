@@ -7,15 +7,15 @@ import play.api.libs.json.Json
 import play.api.Play.current
 import com.github.davidmoten.geo.GeoHash
 
-trait PubService {
-  
+trait PubLocatorService {
   def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq]
-
-  def beers(pubId: String): Future[Seq[Beer]]
-
 }
 
-class FakePubService extends PubService {
+trait BeerListingService {
+  def beers(pubId: String): Future[Seq[Beer]]
+}
+
+class FakePubService extends PubLocatorService with BeerListingService {
   
   def allFakePubs = Play.resourceAsStream("ontap_mapquest_response.json").map { stream =>
     val fileString = scala.io.Source.fromInputStream(stream).getLines().mkString("\n")
@@ -24,7 +24,8 @@ class FakePubService extends PubService {
     })
   } getOrElse PubSeq(Seq())
   
-  override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] = {
+  override def near(lat: Float, lng: Float, maybeBeerId: Option[String],
+                    scale: Int): Future[PubSeq] = {
     val geoHash = GeoHash.encodeHash(lat, lng, scale)
     
     val localPubs = allFakePubs.pubs.filter { pub =>

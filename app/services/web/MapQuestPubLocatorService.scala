@@ -1,6 +1,6 @@
 package services.web
 
-import services.PubService
+import services.PubLocatorService
 import scala.concurrent.Future
 import models.{Pub, PubSeq}
 import play.api.libs.ws._
@@ -12,14 +12,14 @@ import play.api.libs.concurrent.Execution.Implicits._
 /**
  * Created by dick on 2/26/14.
  */
-class MapQuestPubService extends PubService {
+class MapQuestPubLocatorService extends PubLocatorService {
   override def near(lat: Float, lng: Float, maybeBeerId: Option[String], scale: Int): Future[PubSeq] =
-    MapQuestPubService.pubsForLoc(lat, lng, scale, MapQuestPubService.NUMBER_OF_MATCHES)
+    MapQuestPubLocatorService.pubsForLoc(lat, lng, scale, MapQuestPubLocatorService.NUMBER_OF_MATCHES)
 
 }
 
 
-object MapQuestPubService {
+object MapQuestPubLocatorService {
   val NUMBER_OF_MATCHES = 100
 
   val sizes = Vector(0F, 2500F, 630F, 78F, 20F, 2.4F, 0.61F, 0.076F, 0.019F, 0.001F, 0.0001F, 0.00001F, 0.000001F)

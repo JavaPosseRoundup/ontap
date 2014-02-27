@@ -1,7 +1,7 @@
 import com.escalatesoft.subcut.inject._
 import config.StandardBindings
 import play.GlobalSettings
-import scala.reflect._
+import scala.language.reflectiveCalls
 
 class Global extends GlobalSettings {
 
